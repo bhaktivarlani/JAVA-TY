@@ -1,18 +1,26 @@
 
-// Program 2: Display current date and time using Joda-Time API
-// Needs the joda-time jar file
-import org.joda.time.DateTime;
-import org.joda.time.LocalTime;
-
+// Program 2: ArrayList to store and display student names
+import java.util.ArrayList;
 
 public class exp2 {
     public static void main(String[] args) {
-        DateTime dateTime = DateTime.now();   // date + time + time zone
-        LocalDate date = LocalDate.now();     // only date
-        LocalTime time = LocalTime.now();     // only time
+        ArrayList<String> students = new ArrayList<>();
 
-        System.out.println("Current DateTime : " + dateTime);
-        System.out.println("Current Date     : " + date);
-        System.out.println("Current Time     : " + time);
+        //  student names
+        students.add("bhakti");
+        students.add("iraa");
+        students.add("sharayu");
+        students.add("divija");
+
+        // Display names using a normal for loop
+        System.out.println("Student List:");
+        for (int i = 0; i < students.size(); i++) {
+            System.out.println((i + 1) + ". " + students.get(i)); // get(i) reads element at index i
+        }
+
+        System.out.println("Total students : " + students.size());
+
+        students.set(1, "Bhakti");               
+        System.out.println("After replacing    : " + students);
     }
 }

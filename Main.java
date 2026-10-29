@@ -1,4 +1,4 @@
-package labexp5;
+package labexp6;
 
 class Rectangle {
     double length, breadth;
